@@ -119,5 +119,6 @@ public class Q {
         create();
         Inany();
         display();
+        display();
     }
 }

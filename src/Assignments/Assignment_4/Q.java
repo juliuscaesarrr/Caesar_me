@@ -17,7 +17,8 @@ import java.util.Scanner;
 public class Q {
            static Node head;
            static Node tail;
-           static int size = 0;public static void create(){
+           static int size = 0;
+           public static void create(){
             Scanner sc = new Scanner(System.in);
             System.out.print("Enter Registration no: ");
             int k = sc.nextInt();

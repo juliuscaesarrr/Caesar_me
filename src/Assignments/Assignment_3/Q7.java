@@ -9,7 +9,7 @@ public class Q7 {
         }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("ENter a number to find factorial: ");
+        System.out.println("Enter a number to find factorial: ");
         int k = sc.nextInt();
         System.out.println(factorial(5));
 

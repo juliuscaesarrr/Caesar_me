@@ -103,21 +103,100 @@ public class Q {
             temp.next = p;
             p.next.prev = p;
             temp.next.prev = temp;
-        }
+            size++;
             return temp;
+        }
+        return head;
+    }
+    static Node Delbeg(){
+        Node h = head;
+        h = h.next;
+        head = h;
+        h.prev = null;
+        if(head==null){
+            tail=null;
+        }
+        size--;
+        return h;
+    }
+    static Node Delend(){
+        Node k = tail;
+        k = k.prev;
+        k.next = null;
+        tail = k;
+        if(size<=1){
+            Delbeg();
+        }
+        size--;
+        return k;
+    }
+    static Node DelAny() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the position to delete: ");
+        int a = sc.nextInt();
+        if (a == 1) {
+            Delbeg();
+        } else if (a == size) {
+            Delend();
+        } else {
+            Node temp = head;
+            for (int i = 1; i < a - 1; i++) {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+            temp.next.prev = temp;
+            size--;
+            return temp;
+        }
+        return head;
+    }
+    static void sort(){
+        for(int i = 1 ; i < size -1 ;i++){
+            Node k = head;
+            Node p = k.next;
+              for(int j = 0 ; j< size-i-1 ;j++){
+                  if(k.marks>p.marks){
+                      float temp = k.marks;
+                      k.marks = p.marks;
+                      p.marks = temp;
+
+                      int tempq = k.regd_no;
+                      k.regd_no = p.regd_no;
+                      p.regd_no = tempq;
+                  }
+                  k = p;
+                  p = k.next;
+
+              }
+        }
+    }
+    static void reverse(){//isko dekhna padega
+        Node a = head;
+        Node b = a.next;
+        Node c = b.next;
+        a.next = null;
+        while(c!=null){
+            b.next = a;
+            a.prev = b;
+            a=b;
+            b=c;
+            c = c.next;
+        }
+        b.next = a;
+        head = b;
+        head.prev = null;
     }
     static void display(){
-        Node temp = head;
+        Node temp = tail;
         while(temp!=null){
             System.out.println("Regd_no: " + temp.regd_no);
             System.out.println("Marks: " + temp.marks);
-             temp = temp.next;
+             temp = temp.prev;
         }
     }
 
     public static void main(String[] args) {
         create();
-        Inany();
         display();
     }
 }

@@ -183,8 +183,9 @@ public class Q {
             c = c.next;
         }
         b.next = a;
+        a.prev = b;
         head = b;
-        head.prev = null;
+        b.prev = null;
     }
     static void display(){
         Node temp = tail;

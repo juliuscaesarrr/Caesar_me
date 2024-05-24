@@ -174,6 +174,7 @@ public class Q {
         Node a = head;
         Node b = a.next;
         Node c = b.next;
+        tail = a;
         a.next = null;
         while(c!=null){
             b.next = a;

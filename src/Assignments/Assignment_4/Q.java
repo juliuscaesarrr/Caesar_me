@@ -15,8 +15,8 @@ import java.util.Scanner;
         }
     }
 public class Q {
-           static Node head;
-           static Node tail;
+           static Node head = null;
+           static Node tail = null;
            static int size = 0;
            public static void create(){
             Scanner sc = new Scanner(System.in);

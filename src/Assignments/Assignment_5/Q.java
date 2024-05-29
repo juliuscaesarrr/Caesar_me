@@ -30,6 +30,7 @@ public class Q {
         Node n = new Node(k,s);
          head = n;
          tail = n;
+         tail.next = null;
          size++;
         System.out.println("Wants to create more node: (y/n): ");
          char c = sc.next().charAt(0);
@@ -42,6 +43,7 @@ public class Q {
             tail.next = z;
             z.prev = tail;
             tail = z;
+            tail.next = null;
             size++;
             System.out.println("Wants to create more node: (y/n): ");
              c = sc.next().charAt(0);
@@ -170,11 +172,12 @@ public class Q {
               }
         }
     }
-    static void reverse(){//isko dekhna padega
+    static void reverse(){
         Node a = head;
         Node b = a.next;
         Node c = b.next;
         a.next = null;
+        tail = head;
         while(c!=null){
             b.next = a;
             a.prev = b;
@@ -183,8 +186,8 @@ public class Q {
             c = c.next;
         }
         b.next = a;
+        a.prev = b;
         head = b;
-        head.prev = null;
     }
     static void display(){
         Node temp = tail;

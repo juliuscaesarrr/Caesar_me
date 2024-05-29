@@ -5,7 +5,7 @@ public class QH5{
        if(n>=0){
            return k.charAt(n) + Reversing(k,n-1);
        }else
-         return " ";
+         return "";
    }
     public static void main(String[] args) {
        Scanner sc = new Scanner(System.in);

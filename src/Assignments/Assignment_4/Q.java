@@ -158,7 +158,6 @@ public class Q {
             Node p = head;
             Node q = p.next;
             Node r = q.next;
-            tail = p;
             p.next = null;
            while(r!=null){
                q.next = p;

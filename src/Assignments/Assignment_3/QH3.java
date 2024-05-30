@@ -1,19 +1,26 @@
 package Assignments.Assignment_3;
-
+/*
 public class QH3 {
-    static int binaryFinder(int k) {
+    static int s;
+    static int  binaryFinder(int k) {
+
         if (k > 0) {
-            System.out.print(k%2);
-            return binary(k / 2);
+      s= 10*s+k%2;
+            return binaryFinder(k / 2);
         } else {
             return 0;
         }
     }
-    static int binary(int k)
-    {
-        return 1;
+    public static int s(int k) {
+        if (k > 10) {
+            System.out.print(k % 10);
+            return s(k / 10);
+        }
+        else
+            return k;
     }
     public static void main(String[] args) {
-        binary(8);
+        System.out.println(binary(8));
     }
 }
+*/

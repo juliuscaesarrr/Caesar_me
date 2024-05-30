@@ -42,7 +42,7 @@ public class CustomStack {
 
     public int peek() throws Exception {
         if (isEmpty()) {
-            throw new Exception("Can not peek froma an empty Stack");
+            throw new Exception("Can not peek from an empty Stack");
         }
         return data[ptr];
     }
@@ -59,7 +59,9 @@ public class CustomStack {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        CustomStack k = new CustomStack(10);
+        System.out.println("Enter size of stack: ");
+        int a = sc.nextInt();
+        dynamicStack k = new dynamicStack(a);
         while (true) {
             System.out.println("***MENU***");
             System.out.println("0: Exit");
@@ -98,5 +100,25 @@ public class CustomStack {
                     System.out.println("Invalid choice");
             }
         }
+    }
+}
+class dynamicStack extends CustomStack{
+    public dynamicStack(){
+        super();
+    }
+    public dynamicStack(int size){
+        super(size);
+    }
+    @Override
+    public boolean push(int item) {
+        if(this.isFull()){
+            int [] temp = new int[data.length*2];
+            // increase the size
+            for(int i = 0; i <data.length ; i++){
+                temp[i]=data[i];
+            }
+            data = temp;
+        }
+        return super.push(item);
     }
 }

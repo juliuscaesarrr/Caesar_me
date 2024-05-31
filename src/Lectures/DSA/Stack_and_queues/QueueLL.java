@@ -7,18 +7,13 @@ public class QueueLL {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         Node temp = new Node(a);
-        rear = temp;
-        front = temp;
-        System.out.println("Do you want add more node ? yes(1)/no(0)");
-        int s = sc.nextInt();
-        while(s!=0){
-            System.out.println("Enter the element in the node: ");
-            a = sc.nextInt();
-            Node temp1 = new Node(a);
-            rear.next = temp1;
-             rear = temp1;
-            System.out.println("Do you want add more node ? yes(1)/no(0)");
-            s = sc.nextInt();
+        if(rear==null) {
+            rear = temp;
+            front = temp;
+        }
+        else{
+            rear.next=temp;
+            rear=temp;
         }
         return front;
     }

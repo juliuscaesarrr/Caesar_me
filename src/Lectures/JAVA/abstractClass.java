@@ -10,7 +10,7 @@ public class abstractClass {
         System.out.println(C.l);
     }
 }
-abstract class Parent{ // iska object nhi bana skte
+abstract class Parent { // iska object nhi bana skte
     abstract public void Parent1();
 }
 class Child extends Parent{

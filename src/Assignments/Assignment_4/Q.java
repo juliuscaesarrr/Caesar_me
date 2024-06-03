@@ -1,137 +1,175 @@
 package Assignments.Assignment_4;
 import java.util.Scanner;
-    class Node{
-        protected int regd_no;
-        protected float marks;
-        protected Node next;
-        Node(int regd_no, float marks){
-            this.regd_no = regd_no;
-            this.marks = marks;
-        }
-        Node(int regd_no, float marks, Node next){
-            this.regd_no = regd_no;
-            this.marks = marks;
-            this.next = next;
-        }
-    }
+class Node {
+    protected int regd_no;
+    protected float marks;
+    protected Node next;
+}
 public class Q {
-           static Node head = null;
-           static Node tail = null;
-           static int size = 0;
-           public static void create(){
-            Scanner sc = new Scanner(System.in);
+    public static Node start = null;
+    static int size = 0;
+
+    public static Node create(Node start){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Registration no: ");
+        int k = sc.nextInt();
+        System.out.print("Enter Marks: ");
+        int j = sc.nextInt();
+
+        Node p = new Node();
+        p.regd_no = k;
+        p.marks = j;
+        start = p;
+        size++;
+        System.out.println("Do you want to add more elements(y|n): ");
+        char l = sc.next().charAt(0);
+        while(l!='n'){
             System.out.print("Enter Registration no: ");
-            int k = sc.nextInt();
+            k = sc.nextInt();
             System.out.print("Enter Marks: ");
-            int j = sc.nextInt();
-        Node n = new Node(k,j);
-            head = n;
-            tail = n;
-            size++;
+            j = sc.nextInt();
+
+            Node q = new Node();
+            q.regd_no = k;
+            q.marks = j;
+            p.next = q;
+            p = q;
             System.out.println("Do you want to add more elements(yes(1)|no(0): ");
-        char p = sc.next().charAt(0);
-            while(p!='n'){
-                System.out.print("Enter Registration no: ");
-                 k = sc.nextInt();
-                System.out.print("Enter Marks: ");
-                 j = sc.nextInt();
-                Node np = new Node(k,j);
-                tail.next = np;
-                tail = np;
-                System.out.println("Do you want to add more elements(yes(1)|no(0): ");
-                 p = sc.next().charAt(0);
-                 size++;
-            }
-        }
-         public static void Inbeg(int regd_no,float marks ){
-            Node temp = head;
-            Node s = new Node(regd_no,marks);
-            s.next = temp;
-            head = s;
-            if(head==null){
-                tail=null;
-            }
+            l = sc.next().charAt(0);
             size++;
-         }
-         public static Node Inend(int regd_no,float marks){
-            Node y = new Node(regd_no,marks);
-            tail.next = y;
-            tail = y;
-            size++;
-            if(tail==null){
-                Inbeg(regd_no,marks);
-            }
-            size++;
-            return y;
-         }
-         public static Node InAnypos(int regd_no,float marks,int index){
-                Node temp = head;
-            Node k = new Node(regd_no,marks);
-          for(int i = 1 ; i < index - 1 ; i++){
-              temp = temp.next;
-          }
-          k.next = temp.next;
-          temp.next = k;
-          size++;
-          return k;
-         }
-     public static Node DelBeg(){
-         Node p = head;
-            p = p.next;
-            head = p;
-            if(head==null){
-                tail = null;
-            }
-             size--;
-            return p;
-     }
-    public static Node DelEnd(){
-         Node temp = head;
-        while(temp.next!=tail){
-            temp = temp.next;
         }
-        if(size<=1){
-            DelBeg();
-        }
-        temp.next = null;
-        tail = temp;
-         size--;
-        return temp;
+        return start;
     }
-    public static Node DelAny(int pos){
-      Node temp = head;
-            for(int i = 1; i < pos - 1; i++){
-          temp = temp.next;
-      }
-          temp.next = temp.next.next;
-            return temp;
+    public static Node Inbeg(Node start){
+        Scanner sc = new Scanner(System.in);
+        if(start==null){
+            System.out.println("Your list is null");
+        }
+        else {
+            Node s = new Node();
+            System.out.println("Enter registration no: ");
+            s.regd_no = sc.nextInt();
+            System.out.println("Enter marks: ");
+            s.marks = sc.nextInt();
+            s.next = start;
+            start = s;
+            size++;
+        }
+        return  start;
+
     }
-    public static void search(){
-        Node temp = head;
-        int x = 0;
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Enter the registration no: ");
-            int a = sc.nextInt();
-            while (temp!= null) {
-                if (temp.regd_no == a) {
-                    x=1;
-                    break;
-                }
+    public static Node Inend(Node start){
+        Scanner sc = new Scanner(System.in);
+        if(start==null){
+            System.out.println("Your list is null");
+        }
+        else {
+            Node s = new Node();
+            System.out.println("Enter registration no: ");
+            s.regd_no = sc.nextInt();
+            System.out.println("Enter marks: ");
+            s.marks = sc.nextInt();
+
+            Node temp = start;
+            while(temp.next!=null){
                 temp = temp.next;
             }
-            if(x==1){
-                System.out.println("Change the marks: ");
-                temp.marks = sc.nextFloat();
+            temp.next = s;
+        }
+        return  start;
+
+    }
+    public static Node InAny(Node start){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter index: ");
+        int index = sc.nextInt();
+
+        if(index==1){
+            Inbeg(start);
+        } else if (index==size) {
+            Inend(start);
+        }
+        else {
+            Node k = new Node();
+            System.out.println("Enter registration no: ");
+            k.regd_no = sc.nextInt();
+            System.out.println("Enter marks: ");
+            k.marks = sc.nextInt();
+
+            Node temp = start;
+            for (int i = 1; i < index - 1; i++) {
+                temp = temp.next;
             }
-            else
-                System.out.println("Invalid input");
+            k.next = temp.next;
+            temp.next = k;
+            size++;
+        }
+        return start;
+    }
+    public static Node DelBeg(Node start){
+        if(start==null){
+            System.out.println("Your list is empty!!");
+        }
+        else {
+            Node p = start;
+            p = p.next;
+            start = p;
+            size--;
+        }
+        return start;
+    }
+    public static Node DelEnd(Node start) {
+        if (size <= 1) {
+            DelBeg(start);
+        } else {
+            Node temp = start;
+            while (temp.next != null) {
+                temp = temp.next;
             }
-    public static void sort() {
-        for (int i = 1; i < size - 1; i++) {
-            Node n = head;
+            temp = null;
+            size--;
+        }
+        return  start;
+    }
+    public static Node DelAny(Node start){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter index: ");
+        int index = sc.nextInt();
+
+        Node temp = start;
+        for(int i = 1 ; i < index - 1 ; i++){
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+        size--;
+        return start;
+    }
+    public static void search(Node start){
+        Node temp = start;
+        int x = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the registration no: ");
+        int a = sc.nextInt();
+        while (temp!= null) {
+            if (temp.regd_no == a) {
+                x=1;
+                break;
+            }
+            temp = temp.next;
+        }
+        if(x==1){
+            System.out.println("Change the marks: ");
+            temp.marks = sc.nextFloat();
+        }
+        else
+            System.out.println("Invalid input");
+    }
+    public static void sort(Node start) {
+        for (int i = 0; i < size - 1; i++) {
+            Node n = start;
             Node p = n.next;
-            for (int j = 0; j < size - i - 1; j++) {
-                if (n.marks > p.marks) {
+            for (int j = 0; j < size - i - 1 ; j++) {
+                if (n.marks < p.marks) {
                     float temp = n.marks;
                     n.marks = p.marks;
                     p.marks = temp;
@@ -140,103 +178,106 @@ public class Q {
                     n.regd_no = p.regd_no;
                     p.regd_no = tempq;
                 }
-                    n = p;
-                    p = n.next;
-                }
+                n = p;
+                p = n.next;
             }
         }
-    static void count(){
-          Node temp = head;
-          int count  = 0;
-            while(temp!=null){
-                count++;
-                temp = temp.next;
-            }
-        System.out.println("Total numbers of element: " + count);
     }
-    static void reverse(){
-            Node p = head;
-            Node q = p.next;
-            Node r = q.next;
-            p.next = null;
-           while(r!=null){
-               q.next = p;
-               p = q;
-               q = r;
-               r = r.next;
-           }
-           q.next = p;
-           head = q;
-    }
-    static void display(){
-            Node temp = head;
-            while(temp!=null){
-                System.out.println("Regd: " + temp.regd_no);
-                System.out.println("Marks: " + temp.marks);
+    static int count(Node start){
+        Node temp = start;
+        int count  = 0;
+        while(temp!=null){
+            count++;
             temp = temp.next;
+        }
+        System.out.println("Total numbers of element: " + count);
+        return count;
+    }
+    static Node reverse(Node start){
+        Node p = start;
+        Node q = p.next;
+        Node r = q.next;
+        p.next = null;
+        while(r!=null){
+            q.next = p;
+            p = q;
+            q = r;
+            r = r.next;
+        }
+        q.next = p;
+        start = q;
+        return start;
+    }
+    static void display(Node start){
+        Node temp = start;
+        while(temp!=null){
+            System.out.println("Regd: " + temp.regd_no);
+            System.out.println("Marks: " + temp.marks);
+            temp = temp.next;
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while(true){
+            System.out.println();
+            System.out.println("Give some input Baby: ");
+            System.out.println("Create '1'");
+            System.out.println("Display '2'");
+            System.out.println("Insert At Beginning '3'");
+            System.out.println("Insert At End '4'");
+            System.out.println("Insert At Any Position '5'");
+            System.out.println("Delete At Beginning '6'");
+            System.out.println("Delete At AnyPoint '7'");
+            System.out.println("Delete At End '8'");
+            System.out.println("Sort '9'");
+            System.out.println("Search '10'");
+            System.out.println("Reverse '11'");
+            System.out.println("Count '12'");
+            System.out.println("End '0'");
+            System.out.println();
+            int k = sc.nextInt();
+            switch(k){
+                case 0:
+                    System.exit(0);
+                case 1:
+                    start = create(start);
+                    break;
+                case 2:
+                    display(start);
+                    break;
+                case 3:
+                    start = Inbeg(start);
+                    break;
+                case 4:
+                    start = Inend(start);
+                    break;
+                case 5:
+                    start = InAny(start);
+                    break;
+                case 6:
+                    start = DelBeg(start);
+                    break;
+                case 7:
+                    start =  DelAny(start);
+                    break;
+                case 8:
+                    start =  DelEnd(start);
+                    break;
+                case 9:
+                    sort(start);
+                    break;
+                case 10:
+                    search(start);
+                    break;
+                case 11:
+                    start = reverse(start);
+                    break;
+                case 12:
+                    count(start);
+                    break;
+                default:
+                    System.out.println("enter a valid input");
             }
         }
-    public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
-         while(true){
-             System.out.println();
-             System.out.println("Give some input Baby: ");
-             System.out.println("Create '1'");
-             System.out.println("Display '2'");
-             System.out.println("Insert At Beginning '3'");
-             System.out.println("Insert At End '4'");
-             System.out.println("Insert At Any Position '5'");
-             System.out.println("Delete At Beginning '6'");
-             System.out.println("Delete At AnyPoint '7'");
-             System.out.println("Delete At End '8'");
-             System.out.println("Sort '9'");
-             System.out.println("Search '10'");
-             System.out.println("Reverse '11'");
-             System.out.println("End '0'");
-             System.out.println();
-            int k = sc.nextInt();
-             switch(k){
-                 case 0:
-                     System.exit(0);
-                 case 1:
-                     create();
-                     break;
-                 case 2:
-                     display();
-                     break;
-                 case 3:
-                     Inbeg(6229,69);
-                     break;
-                 case 4:
-                     Inend(79,45);
-                     break;
-                 case 5:
-                     InAnypos(100,75,2);
-                     break;
-                 case 6:
-                     DelBeg();
-                     break;
-                 case 7:
-                     DelAny(2);
-                     break;
-                 case 8:
-                     DelEnd();
-                     break;
-                 case 9:
-                     sort();
-                     break;
-                 case 10:
-                     search();
-                     break;
-                 case 11:
-                     reverse();
-                     break;
-                 case 12:
-                     count();
-                     break;
-                 default:
-                     System.out.println("enter a valid input");
-             }
-         }
     }
 }

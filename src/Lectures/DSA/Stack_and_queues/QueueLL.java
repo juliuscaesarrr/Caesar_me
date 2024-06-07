@@ -33,9 +33,37 @@ public class QueueLL {
         }
     }
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
      Node rear = null,front = null;
-        front=insert(rear,front);
-        front=delete(rear,front);
-        display(rear,front);
+        while (true) {
+            System.out.println("MENU");
+            System.out.println("0: Exit");
+            System.out.println("1: insert");
+            System.out.println("2: delete");
+            System.out.println("3: Display");
+            System.out.println("Enter your choice");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 0:
+                    System.exit(0);
+                case 1:
+                    if(front==null) {
+                        front = insert(rear, front);
+                        rear = front;
+                    }
+                    else{
+                        rear = insert(rear,front);
+                    }
+                    break;
+                case 2:
+                    front=delete(rear,front);
+                    break;
+                case 3:
+                    display(rear,front);
+                    break;
+                default:
+                    System.out.println("Invalid choice");
+            }
+        }
     }
 }

@@ -106,7 +106,7 @@ public class Q {
             p.regd_no = k;
             p.marks = s;
 
-            for (int i = 1; i < pos - 2; i++) {
+            for (int i = 1; i < pos - 1; i++) {
                 temp = temp.next;
             }
             p.next = temp.next;
@@ -149,7 +149,7 @@ public class Q {
             Delend(start, end);
         } else {
             Node temp = start;
-            for (int i = 1; i < a - 2; i++) {
+            for (int i = 1; i < a - 1; i++) {
                 temp = temp.next;
             }
             temp.next = temp.next.next;

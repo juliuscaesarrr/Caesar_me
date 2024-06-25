@@ -1,4 +1,4 @@
-package Lectures.DSA.binarySearch;
+package DSA.seaRching.binarySearch;
 
 public class binarySearch {
     static int index(int [] array , int key ){

@@ -1,4 +1,4 @@
-package Lectures.JAVA;
+package JAVA;
 import java.util.Scanner;
 public class exceptionHandling {
     // public static void main(String[] args) {

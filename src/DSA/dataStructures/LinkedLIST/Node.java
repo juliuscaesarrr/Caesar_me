@@ -1,4 +1,4 @@
-package Lectures.DSA.LinkedLIST;
+package DSA.dataStructures.LinkedLIST;
 class Node {
         int regd_no;
         double marks;

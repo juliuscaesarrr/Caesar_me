@@ -1,4 +1,4 @@
-package Lectures.JAVA;
+package JAVA;
 
 public class Inheritence {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Lectures.DSA.cycleSort;
+package DSA.sOrting.cycleSort;
 import java.util.Scanner;
 // when given number from 1 to n than use "cycle sort";
 public class cycleSort {

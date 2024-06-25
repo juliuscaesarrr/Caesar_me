@@ -1,4 +1,4 @@
-package Lectures.DSA.Stack_and_queues;
+package DSA.dataStructures.Stack_and_Queues;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package Lectures.DSA.LinkedLIST;
+package DSA.dataStructures.LinkedLIST;
 import java.util.Scanner;
 public class singlyLList {
     static Node head = null;

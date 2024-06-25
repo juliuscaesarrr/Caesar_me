@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bca5e44f-2a20-43d2-beec-21ed8d5cda17" name="Changes" comment="" />
+    <list default="true" id="bca5e44f-2a20-43d2-beec-21ed8d5cda17" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/src/DSA/seaRching/LinearSearch/Ls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/InsertionSORT/insertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/sOrting/InsertionSORT/insertionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/LinkedLIST/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/dataStructures/LinkedLIST/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/LinkedLIST/doublyLList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/dataStructures/LinkedLIST/doublyLList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/LinkedLIST/singlyLList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/dataStructures/LinkedLIST/singlyLList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/Stack_and_queues/CustomQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/dataStructures/Stack_and_Queues/CustomQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/Stack_and_queues/CustomStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/dataStructures/Stack_and_Queues/CustomStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/Stack_and_queues/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/dataStructures/Stack_and_Queues/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/Stack_and_queues/QueueLL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/dataStructures/Stack_and_Queues/QueueLL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/Stack_and_queues/StackLL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/dataStructures/Stack_and_Queues/StackLL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/Stack_and_queues/javaDefined.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/dataStructures/Stack_and_Queues/javaDefined.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/binarySearch/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/seaRching/binarySearch/Questions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/binarySearch/binarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/seaRching/binarySearch/binarySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/bubbleSORT/bubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/sOrting/bubbleSORT/bubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/cycleSort/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/sOrting/cycleSort/Questions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/cycleSort/cycleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/sOrting/cycleSort/cycleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/selectionSORT/selectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/sOrting/selectionSORT/selectionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAVA/Arrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAVA/Arrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAVA/Inheritence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAVA/Inheritence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAVA/Interfacessss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAVA/Interfacessss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAVA/Method_Overriding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAVA/Method_Overriding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAVA/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAVA/Methods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAVA/abstractClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAVA/abstractClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAVA/exceptionHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAVA/exceptionHandling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JAVA/javaGenerics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JAVA/javaGenerics.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -14,20 +51,57 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2iMf5lfn5lKvJIlq7j9vP3ogThO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.Ls.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Questions.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+    &quot;git-widget-placeholder&quot;: &quot;DSA&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/IdeaProjects/Caesar&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="DSA.sOrting" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Questions">
+    <configuration name="Ls" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DSA.seaRching.LinearSearch.Ls" />
+      <module name="DSA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DSA.seaRching.LinearSearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Questions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DSA.sOrting.cycleSort.Questions" />
+      <module name="DSA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DSA.sOrting.cycleSort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="binarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lectures.DSA.binarySearch.binarySearch" />
       <module name="DSA" />
@@ -43,6 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Questions" />
+        <item itemvalue="Application.Ls" />
         <item itemvalue="Application.binarySearch" />
       </list>
     </recent_temporary>
@@ -63,6 +139,42 @@
       <option name="presentableId" value="Default" />
       <updated>1719305190483</updated>
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <option name="closed" value="true" />
+      <created>1719306497409</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719306497409</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
 </project>

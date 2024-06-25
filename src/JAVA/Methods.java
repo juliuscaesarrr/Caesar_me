@@ -1,4 +1,4 @@
-package Lectures;
+package JAVA;
 
 public class Methods {
     /*    static int logic (int x,int y){

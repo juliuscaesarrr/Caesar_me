@@ -1,4 +1,4 @@
-package Lectures.DSA.selectionSORT;
+package DSA.sOrting.selectionSORT;
 
 public class selectionSort {
     public static int[] arr2(int[] arr) {

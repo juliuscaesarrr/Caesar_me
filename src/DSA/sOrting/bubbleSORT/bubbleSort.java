@@ -1,4 +1,4 @@
-package Lectures.DSA.bubbleSORT;
+package DSA.sOrting.bubbleSORT;
 
 public class bubbleSort {
     public static int [] arr2(int [] arr){

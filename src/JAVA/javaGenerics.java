@@ -1,4 +1,4 @@
-package Lectures.JAVA;
+package JAVA;
 
 public class javaGenerics {
     public static<t> void gen(t l){

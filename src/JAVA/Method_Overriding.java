@@ -1,4 +1,4 @@
-package Lectures.JAVA;
+package JAVA;
 
 public class Method_Overriding {
     public static void main(String[] args) {

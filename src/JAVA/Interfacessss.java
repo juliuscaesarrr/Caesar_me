@@ -1,4 +1,4 @@
-package Lectures.JAVA;
+package JAVA;
 
 public class Interfacessss implements Car{
     public static void main(String[] args) {

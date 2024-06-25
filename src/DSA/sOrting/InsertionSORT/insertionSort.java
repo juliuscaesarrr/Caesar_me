@@ -1,4 +1,4 @@
-package Lectures.DSA.InsertionSORT;
+package DSA.sOrting.InsertionSORT;
 
 public class insertionSort {
     public static int [] arr2(int [] arr){
